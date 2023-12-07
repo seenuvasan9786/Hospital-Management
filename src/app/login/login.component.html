@@ -1,0 +1,18 @@
+<div class="screen">
+    <div class="layout">
+        <div class="admin">
+            <h3>Admin Login</h3>
+            <form [formGroup]="loginform">
+                <label for="admins" class="labell">Admin Id:</label>
+                <input type="text" id="admins" name="admin_id" formControlName="admin_id"><br>
+                <label for="pass" class="labell">Password:</label>
+                <input type="password" name="" id="pass" name="password" formControlName="password">
+            </form>
+            <button (click)="login()">Login</button>
+            <p>Not a Member? <span (click)="goto()">Signup</span></p>
+            <p class="incorrect" [ngStyle]="{'display':incorrect===true?'block':'none'}">Incorrect Admin Id or Password
+            </p>
+            <p class="donelog" [ngStyle]="{'display':logindone===true?'block':'none'}">Login Successfully</p>
+        </div>
+    </div>
+</div>

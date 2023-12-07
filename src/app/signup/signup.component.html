@@ -1,0 +1,27 @@
+<div class="screen">
+    <div class="layout">
+        <div class="admin">
+            <h3>Sign Up</h3>
+            <form [formGroup]="signupform">
+                <label for="name" class="labell">Name :</label>
+                <input type="text" id="name" name="uname" formControlName="uname"><br>
+
+                <label for="email" class="labell">Email :</label>
+                <input type="text" id="email" name="umail" formControlName="umail"><br>
+
+                <label for="admins" class="labell">Admin Id:</label>
+                <input type="text" id="admins" name="admin_id" formControlName="admin_id"><br>
+
+                <label for="pass" class="labell">Password:</label>
+                <input type="password" name="" id="pass" name="password" formControlName="password">
+
+            </form>
+            <button (click)="signup()">Sign Up</button>
+            <p>Already Login? <span (click)="goto()" style="cursor:pointer;">Login</span></p>
+            <p class="incorrect" [ngStyle]="{'display':incorrect===true?'block':'none'}">Admin Id is already Exist</p>
+            <p class="incorrect" [ngStyle]="{'display':logindone===true?'block':'none'}">Please fill the all input field
+            </p>
+            <p class="donelog" [ngStyle]="{'display': accept===true?'block':'none'}">Account Created</p>
+        </div>
+    </div>
+</div>

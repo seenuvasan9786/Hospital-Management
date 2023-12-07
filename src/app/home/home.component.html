@@ -1,0 +1,27 @@
+<div class="screen">
+    <div class="layout">
+        <div class="left">
+            <div class="button" onclick="done()">
+                <div class="design d1"></div>
+                <div class="design d2"></div>
+                <div class="design d3"></div>
+            </div>
+            <div class="links">
+                <button class="lkname" (click)="Goto('/appointment')">Appointment Details</button>
+                <button class="lkname" (click)="Goto('/history')">Partient History</button>
+                <button class="lkname" (click)="Goto('/out-patient')">Out Partient Entry</button>
+                <button class="lkname" (click)="adminlogout()">Logout</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="photo">
+                <p>Admin<br>Photo</p>
+            </div>
+            <div class="det">
+                <h4>Name&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;:{{'
+                    '+this.name}}<span>&ThickSpace;</span></h4>
+                <h4>Admin id&ThickSpace;:<span>&ThickSpace;{{" "+this.adminid}}</span></h4>
+            </div>
+        </div>
+    </div>
+</div>

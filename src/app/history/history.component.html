@@ -1,0 +1,32 @@
+<div class="screen">
+    <div class="layout">
+        <div class="contain">
+            <button id="back_btn" (click)="go()">&laquo;Back</button>
+            <h1>Patient History</h1>
+            <div class="table_tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.no</th>
+                            <th>Patient id</th>
+                            <th>Patient name</th>
+                            <th>Doctor name</th>
+                            <th>Appointment Date</th>
+                            <th>Last Update(date and time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let list of userstore">
+                            <td>{{list.tid}}</td>
+                            <td>{{list.patient_id}}</td>
+                            <td>{{list.patient_name}}</td>
+                            <td>{{list.Doctor_name}}</td>
+                            <td>{{list.Appdate}}</td>
+                            <td>{{list.last}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

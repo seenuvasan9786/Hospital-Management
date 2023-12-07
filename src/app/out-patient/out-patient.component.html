@@ -1,0 +1,68 @@
+<div class="screen">
+    <div class="layout">
+        <div class="contain">
+            <button id="back_btn" (click)="go()">&laquo;Back</button>
+            <h1>Out-Patient Page</h1>
+            <div class="tableinsert">
+                <form [formGroup]="outpatient">
+                    <label for="">Email ID :</label>
+                    <input type="email" id="" name="Emai_id" formControlName="Email_id">
+
+                    <label for="">Patient name :</label>
+                    <input type="text" id="" name="Patient_name" formControlName="Patient_name">
+
+                    <label for="sizechage2">Gender</label>
+                    <select id="sizechage2" name="gender" formControlName="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select><br>
+
+                    <label for="">Age :</label>
+                    <input type="number" id="sizechage1" name="Age" formControlName="Age">
+
+                    <label for="">Phone_no :</label>
+                    <input type="text" id="sizechage" name="Phone_no" formControlName="Phone_no">
+
+                    <label for="sizechage">Patient id :</label>
+                    <input type="text" id="sizechange5" name="Patient_id" formControlName="Patient_id">
+
+                    <button id="addbtn" (click)="add_list()">Add Out-Patient</button>
+                </form>
+                <p id="Error_field" [ngStyle]="{'display':error1===false?'block':'none'}">Please Fill all the Input
+                    Field</p>
+                <p id="Error_field2" [ngStyle]="{'display':error2===true?'block':'none'}">Patient_id :'{{this.exname}}'
+                    is already Exist</p>
+                <p id="Error_field3" [ngStyle]="{'display':error3===true?'block':'none'}">Data inserted
+                    Successfully....!</p>
+            </div>
+            <div class="table_tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email ID</th>
+                            <th>Patient name</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Phone_no</th>
+                            <th>Patient id</th>
+                            <th>Done</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let list of outpstore">
+                            <td>{{list.email_id}}</td>
+                            <td>{{list.Pname}}</td>
+                            <td>{{list.gender}}</td>
+                            <td>{{list.age}}</td>
+                            <td>{{list.phone_no}}</td>
+                            <td>{{list.patient_id}}</td>
+                            <td>
+                                <button (click)="Removeadd(list)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
